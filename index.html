@@ -7,14 +7,38 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>DOM Testing and User Behavior Simulation</h1>
-  <button id="simulate-click">Simulate Click</button>
-  <form id="user-form">
-    <input type="text" id="user-input" placeholder="Enter text">
-    <button type="submit">Submit</button>
-  </form>
-  <div id="dynamic-content"></div>
-  <div id="error-message" class="hidden"></div>
+  <div class="app-shell">
+    <header class="app-header">
+      <div class="traffic-lights">
+        <span class="dot dot-close"></span>
+        <span class="dot dot-minimize"></span>
+        <span class="dot dot-fullscreen"></span>
+      </div>
+      <h1>DOM Testing and User Behavior Simulation</h1>
+    </header>
+
+    <main class="app-main">
+      <section class="glass-card">
+        <button id="simulate-click" class="primary-btn">
+          Simulate Click
+        </button>
+
+        <form id="user-form" class="form">
+          <input
+            type="text"
+            id="user-input"
+            placeholder="Enter text"
+            autocomplete="off"
+          >
+          <button type="submit" class="primary-btn">Submit</button>
+        </form>
+
+        <div id="dynamic-content" class="dynamic-panel"></div>
+        <div id="error-message" class="hidden error-text"></div>
+      </section>
+    </main>
+  </div>
+
   <script src="../index.js"></script>
 </body>
 </html>
